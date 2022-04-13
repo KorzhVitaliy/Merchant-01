@@ -1,5 +1,9 @@
 package app;
 
+import app.Models.MerchantA;
+import app.Products.ProductA;
+import app.Utils.Rounder;
+
 // Класс-входная точка в приложение.
 // App launcher.
 public class App {

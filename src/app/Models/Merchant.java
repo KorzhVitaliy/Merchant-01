@@ -1,4 +1,4 @@
-package app;
+package app.Models;
 
 // Модель объекта Продавца.
 public class Merchant {

@@ -1,4 +1,4 @@
-package app;
+package app.Interfaces;
 
 // Интерфейс для расчета бонуса Продавца
 public interface Bonus {

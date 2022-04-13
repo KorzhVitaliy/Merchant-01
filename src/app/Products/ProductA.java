@@ -1,4 +1,7 @@
-package app;
+package app.Products;
+
+import app.Interfaces.Sales;
+import app.Utils.Rounder;
 
 // Класс наследует класс-модель,
 // и реализует интерфейс базового функционала Товара.

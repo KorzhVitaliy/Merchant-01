@@ -1,4 +1,6 @@
-package app;
+package app.Models;
+
+import app.Interfaces.Bonus;
 
 // Класс наследует класс-модель,
 // и реализует интерфейс базового функционала Продавца.

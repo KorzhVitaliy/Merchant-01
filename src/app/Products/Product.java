@@ -1,4 +1,4 @@
-package app;
+package app.Products;
 
 // Модель объекта Товара.
 public class Product {
