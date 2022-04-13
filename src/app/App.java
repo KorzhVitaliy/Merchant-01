@@ -4,6 +4,8 @@ import app.Models.MerchantA;
 import app.Products.ProductA;
 import app.Utils.Rounder;
 
+import java.util.Scanner;
+
 // Класс-входная точка в приложение.
 // App launcher.
 public class App {
@@ -22,20 +24,24 @@ public class App {
 
     // Делаем метод main() наименее загруженным логикой
     public static void main(String[] args) {
-        initVars();
+        //initVars();
+        Scanner scanner = new Scanner(System.in);
+        userData(scanner);
         showData(processData());
+
+        scanner.close();
     }
 
     // Инициализация переменных.
     // Имитация ввода данных пользователем.
-    private static void initVars() {
-        merchantName = "Роберт";
-        email = "bob@mail.com";
-        phone = "055 123-4567";
-        productName = "апельсины";
-        quantity = 1000;
-        price = 19.99;
-    }
+//    private static void initVars() {
+//        merchantName = "Роберт";
+//        email = "bob@mail.com";
+//        phone = "055 123-4567";
+//        productName = "апельсины";
+//        quantity = 1000;
+//        price = 19.99;
+//    }
 
     // Передача данных на обработку.
     // Вызовы методов через экземпляры классов
@@ -55,5 +61,16 @@ public class App {
     // Вывод данных
     private static void showData(String output) {
         System.out.println(output);
+    }
+
+    public static String userData(Scanner scanner) {
+        System.out.println("Введите имя: ");
+        merchantName = scanner.next();
+        System.out.println("Введите ваш Email: ");
+        email = scanner.next();
+        System.out.println("Введите ваш номер телефона: ");
+        phone = scanner.next();
+
+        return merchantName + email + phone;
     }
 }
