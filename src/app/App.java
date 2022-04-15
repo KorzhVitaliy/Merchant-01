@@ -27,11 +27,8 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         getUserInput(scanner);
         getProductInfo(scanner);
-
         scanner.close();
         showData(processData());
-
-
     }
 
     // Инициализация переменных.
