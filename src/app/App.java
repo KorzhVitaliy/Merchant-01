@@ -3,7 +3,6 @@ package app;
 import app.Models.MerchantA;
 import app.Products.ProductA;
 import app.Utils.Rounder;
-
 import java.util.Scanner;
 
 // Класс-входная точка в приложение.
@@ -26,10 +25,13 @@ public class App {
     public static void main(String[] args) {
         //initVars();
         Scanner scanner = new Scanner(System.in);
-        userData(scanner);
-        showData(processData());
+        getUserInput(scanner);
+        getProductInfo(scanner);
 
         scanner.close();
+        showData(processData());
+
+
     }
 
     // Инициализация переменных.
@@ -63,7 +65,7 @@ public class App {
         System.out.println(output);
     }
 
-    public static String userData(Scanner scanner) {
+    public static String getUserInput(Scanner scanner) {
         System.out.println("Введите имя: ");
         merchantName = scanner.next();
         System.out.println("Введите ваш Email: ");
@@ -73,4 +75,16 @@ public class App {
 
         return merchantName + email + phone;
     }
+
+    public static String getProductInfo(Scanner scanner) {
+        System.out.println("Введите наименование товара: ");
+        productName = scanner.next();
+        System.out.println("Введите колличестово (шт): ");
+        quantity = scanner.nextInt();
+        System.out.println("Введите цену товара: ");
+        price = scanner.nextDouble();
+
+        return productName + quantity + price;
+    }
 }
+
